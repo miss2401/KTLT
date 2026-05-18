@@ -28,8 +28,18 @@ void Tim_Kiem_Min(double arr[], int n){
         }
     }
     printf("\nSo be nhat cua mang la: %lf", min);
-    return;
 }
+
+void Tim_Kiem_Max(double arr[], int n){
+    double max = arr[0];
+    for(int i = 1; i < n; i++){
+        if(arr[i] > max){
+            max = arr[i];
+        }
+    }
+    printf("\nSo lon nhat cua mang la: %lf", max);
+}
+
 
 double *Tao_mang(){
     printf("Nhap kich thuoc mang: ");
@@ -54,5 +64,6 @@ int main(){
     double *arr = Tao_mang();
     Tim_Kiem(arr, n);
     Tim_Kiem_Min(arr, n);
+    Tim_Kiem_Max(arr, n);
     printf("\n");
 }
