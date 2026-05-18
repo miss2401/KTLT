@@ -1,0 +1,5 @@
+#Bo qua folder .vscode/
+.vscode/
+
+Bai_4
+!Bai_4/*.c
