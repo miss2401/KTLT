@@ -1,6 +1,12 @@
 #Bo qua folder .vscode/
 .vscode/
 
-*
+# 1. Bỏ qua toàn bộ các file và thư mục con nằm trong thư mục Bai_4
+Bai_4/*
+
+# 2. Loại trừ (không bỏ qua) các file có đuôi .c
 !Bai_4/*.c
+
+# 3. (Tùy chọn) Đảm bảo Git không bỏ qua các thư mục con bên trong Bai_4 để nó tìm được file .c
+
 !*.md
