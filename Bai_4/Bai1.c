@@ -18,7 +18,7 @@ double *Tao_mang(){
         printf("Giá trị của arr[%d] = ", i);
         while(!scanf("%lf", &arr[i])){
             printf("Nhập lại: ");
-            while(getchar() != "\n");
+            while(getchar() != '\n');
         }    
     }
     return arr;
