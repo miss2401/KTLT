@@ -1,7 +1,7 @@
 //Name
 //MSSV
 //Class
-//3. Heap sort
+//3. Heap sort, Quick sort, shell sort
 #include <stdio.h>
 #include<stdlib.h>
 int n;
@@ -52,9 +52,47 @@ void Heap_sort(double arr[], int n){
         Heapify(arr, i, 0);
     }
 }
+
+int Partition(double arr[], int l, int r){
+    int pivot = arr[r];
+    int i = l - 1;
+    for(int j = l; j < r; j++){
+        if(arr[j] < pivot){
+            double temp = arr[++i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+    double temp = arr[++i];
+    arr[i] = arr[r];
+    arr[r] = temp;
+    return i;
+}
+void Quick_sort(double arr[], int l, int r){
+    if(l < r){
+        int m = Partition(arr, l, r);
+        Quick_sort(arr, l, m - 1);
+        Quick_sort(arr, m + 1, r);
+    }
+}
+
+void shellSort(double arr[], int n) {
+    for (int i = n / 2; i > 0; i /= 2) {
+        for (int j = i; j < n; j++) {
+            
+            int temp = arr[j];  
+            int k = j;
+            while (k >= i && arr[k - i] > temp) {
+                arr[k] = arr[k - i];
+                k -= i;
+            }
+            arr[k] = temp;
+        }
+    }
+}
 int main(){
     double *arr = Tao_mang();
-    Heap_sort(arr, n);
+    shellSort(arr,  n );
     printf("Mảng sau khi sắp xếp: ");
     display(arr);
     free(arr);
