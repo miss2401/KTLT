@@ -66,5 +66,6 @@ int main(){
     Tim_Kiem_Max(arr, n);
 
     printf("\n");
+    free(arr);
     return 0;
 }

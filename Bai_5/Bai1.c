@@ -1,7 +1,7 @@
 //Name
 //MSSV
 //Class
-
+//1. Insertion sort, Selection sort, Bubble sort
 #include<stdio.h>
 #include<stdlib.h>
 

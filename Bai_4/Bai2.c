@@ -45,6 +45,7 @@ int main(){
         break;
     }
     Binary_Search(arr, 0, n - 1, k);
+    free(arr);
     return 0;
 
 }
