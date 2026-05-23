@@ -4,9 +4,11 @@
 # 1. Bỏ qua toàn bộ các file và thư mục con nằm trong thư mục Bai_4 va 5
 Bai_4/*
 Bai_5/*
+Bai_6/*
 # 2. Loại trừ (không bỏ qua) các file có đuôi .c
 !Bai_4/*.c
 !Bai_4/*.py
 !Bai_5/*.c
 !Bai_5/*.py
+!Bai_6/*.py
 !*.md
